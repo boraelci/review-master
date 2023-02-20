@@ -38,7 +38,7 @@ export function HistoricalView(props: HistoricalViewProps) {
     },
   };
 
-  const sampleDates = [
+  const months = [
     "January",
     "February",
     "March",
@@ -48,7 +48,7 @@ export function HistoricalView(props: HistoricalViewProps) {
     "July",
   ];
 
-  const samplePositiveCountMap: any = {
+  const positiveMonthToCount: any = {
     January: 10,
     February: 11,
     March: 9,
@@ -58,7 +58,7 @@ export function HistoricalView(props: HistoricalViewProps) {
     July: 1,
   };
 
-  const sampleNegativeCountMap: any = {
+  const negativeMonthToCount: any = {
     January: 1,
     February: 3,
     March: 5,
@@ -69,17 +69,17 @@ export function HistoricalView(props: HistoricalViewProps) {
   };
 
   const data: any = {
-    sampleDates,
+    months,
     datasets: [
       {
         label: "Positive",
-        data: samplePositiveCountMap,
+        data: positiveMonthToCount,
         borderColor: "rgb(255, 99, 132)",
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
       {
         label: "Negative",
-        data: sampleNegativeCountMap,
+        data: negativeMonthToCount,
         borderColor: "rgb(53, 162, 235)",
         backgroundColor: "rgba(53, 162, 235, 0.5)",
       },
