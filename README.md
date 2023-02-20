@@ -1,7 +1,7 @@
 # Review Master
 A library to visualize business intelligence derived from sentiment analysis on product reviews
 
-![MIT License](https://img.shields.io/github/license/boraelci/review-master)
+![MIT License](https://img.shields.io/github/license/boraelci/review-master) ![issues](https://img.shields.io/github/issues/boraelci/review-master)
 
 ## Overview
 
