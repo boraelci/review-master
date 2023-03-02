@@ -1,5 +1,5 @@
-import "./App.css";
-import { CategoricalView, HistoricalView } from "./views";
+import './App.css';
+import { CategoricalView, HistoricalView } from './views';
 
 function App() {
   return (
