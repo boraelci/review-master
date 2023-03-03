@@ -1,2 +1,2 @@
-export * from "./HistoricalView";
-export * from "./CategoricalView";
+export * from './HistoricalView';
+export * from './CategoricalView';

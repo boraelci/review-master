@@ -7,8 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from "chart.js";
-import { Line } from "react-chartjs-2";
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
@@ -17,7 +17,7 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 );
 
 interface HistoricalViewProps {
@@ -29,7 +29,7 @@ export function HistoricalView(props: HistoricalViewProps) {
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const,
+        position: 'top' as const,
       },
       title: {
         display: props.title,
@@ -39,13 +39,13 @@ export function HistoricalView(props: HistoricalViewProps) {
   };
 
   const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
   ];
 
   const positiveMonthToCount: any = {
@@ -72,16 +72,16 @@ export function HistoricalView(props: HistoricalViewProps) {
     months,
     datasets: [
       {
-        label: "Positive",
+        label: 'Positive',
         data: positiveMonthToCount,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
       {
-        label: "Negative",
+        label: 'Negative',
         data: negativeMonthToCount,
-        borderColor: "rgb(53, 162, 235)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        borderColor: 'rgb(53, 162, 235)',
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },
     ],
   };
