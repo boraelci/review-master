@@ -1,28 +1,10 @@
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import { ChartWrapper } from '../components';
 import { HistoricalDataProvider } from '../providers';
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-);
 
 interface HistoricalViewProps {
   title: string;
+  provider: HistoricalDataProvider;
+  chartWrapper: ChartWrapper;
 }
 
 export function HistoricalView(props: HistoricalViewProps) {
@@ -39,7 +21,7 @@ export function HistoricalView(props: HistoricalViewProps) {
     },
   };
 
-  const provider = new HistoricalDataProvider();
+  const provider = props.provider;
   const months = provider.getMonths();
   const historicalData = provider.getData();
 
@@ -61,5 +43,5 @@ export function HistoricalView(props: HistoricalViewProps) {
     ],
   };
 
-  return <Line options={options} data={data} />;
+  return props.chartWrapper.line(options, data);
 }
