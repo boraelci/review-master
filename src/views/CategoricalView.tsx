@@ -1,29 +1,11 @@
-import {
-  Chart as ChartJS,
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import { Radar } from 'react-chartjs-2';
 import { CategoricalDataProvider } from '../providers';
+import { ChartWrapper } from '../components';
 
 interface CategoricalViewProps {
   title: string;
+  provider: CategoricalDataProvider;
+  chartWrapper: ChartWrapper;
 }
-
-ChartJS.register(
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Filler,
-  Tooltip,
-  Legend,
-);
 
 export function CategoricalView(props: CategoricalViewProps) {
   const options = {
@@ -39,11 +21,12 @@ export function CategoricalView(props: CategoricalViewProps) {
     },
   };
 
-  const provider = new CategoricalDataProvider();
+  const provider = props.provider;
   const categoricalData = provider.getData();
+  const labels = provider.getLabels();
 
   const data = {
-    labels: ['Cost', 'Quality', 'Durability', 'Effectiveness', 'Ease of use'],
+    labels: labels,
     datasets: [
       {
         label: 'Positive',
@@ -62,5 +45,6 @@ export function CategoricalView(props: CategoricalViewProps) {
     ],
   };
 
-  return <Radar options={options} data={data} />;
+  return props.chartWrapper.radar(options, data);
+  // return <Radar options={options} data={data} />;
 }

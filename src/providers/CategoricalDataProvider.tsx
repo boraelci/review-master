@@ -23,4 +23,8 @@ export class CategoricalDataProvider {
       negativeCategoryToCount,
     });
   }
+
+  getLabels() {
+    return ['Cost', 'Quality', 'Durability', 'Effectiveness', 'Ease of use'];
+  }
 }
