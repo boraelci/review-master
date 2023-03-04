@@ -12,7 +12,7 @@ Let's imagine a pair of headphones, listed on an e-commerce website, that has th
 
 ## Scripts
 
-In the project directory, you can run:
+This project uses the TypeScript dialect of JavaScript. It has the following commands:
 
 ### `npm install`
 
@@ -20,16 +20,24 @@ Install dependencies
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode. It also displays coverage information. A report is generated at [./coverage/lcov-report/index.html](./coverage/lcov-report/index.html)
+Run the test suite and show coverage information. A report is generated at [./coverage/lcov-report/index.html](./coverage/lcov-report/index.html)
+
+### `npm run lint`
+
+Run static analysis with `eslint`
+
+### `npm run prettier`
+
+Autoformat the code with `prettier`
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Build the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
