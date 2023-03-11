@@ -12,11 +12,6 @@
     "email": "bora.elci@columbia.edu"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/node_modules/",
-      "!<rootDir>/**/*/index.tsx"
-    ],
     "coverageThreshold": {
       "global": {
         "branches": 50,
@@ -24,10 +19,7 @@
         "lines": 50,
         "statements": 50
       }
-    },
-    "coverageReporters": [
-      "text"
-    ]
+    }
   },
   "scripts": {
     "start": "react-scripts start",
@@ -73,12 +65,12 @@
   },
   "devDependencies": {
     "@types/jest": "^29.2",
-    "jest": "^29.3",
     "@typescript-eslint/eslint-plugin": "^5.44",
     "@typescript-eslint/parser": "^5.44",
     "eslint": "^8.28",
     "eslint-config-prettier": "^8.5",
     "eslint-plugin-jest": "^27.1",
+    "jest": "^29.3",
     "prettier": "^2.8",
     "ts-jest": "~29.0",
     "typescript": "~4.9"
