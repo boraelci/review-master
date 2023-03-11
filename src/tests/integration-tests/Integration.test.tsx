@@ -1,9 +1,6 @@
 import { render } from '@testing-library/react';
 import { ChartWrapper } from '../../components';
-import {
-  CategoricalDataProvider,
-  HistoricalDataProvider,
-} from '../../providers';
+import { HistoricalDataProvider } from '../../providers';
 import { HistoricalView } from '../../views';
 
 it('displays the historical data correctly', () => {
