@@ -1,5 +1,8 @@
 # Review Master
 
+[![Build Status](https://github.com/boraelci/review-master/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/boraelci/review-master/actions?query=workflow%3A%22Build+Status%22)
+[![codecov](https://codecov.io/gh/boraelci/review-master/branch/main/graph/badge.svg)](https://codecov.io/gh/boraelci/review-master)
+
 A library to visualize business intelligence derived from sentiment analysis on product reviews
 
 ![MIT License](https://img.shields.io/github/license/boraelci/review-master) ![issues](https://img.shields.io/github/issues/boraelci/review-master)
