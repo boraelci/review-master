@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import { ChartWrapper } from '../../components';
 import { HistoricalDataProvider } from '../../providers';
 import { HistoricalView } from '../../views';
@@ -30,7 +29,7 @@ it('displays the historical data correctly', () => {
     chartWrapper: chartWrapper,
   };
 
-  render(<HistoricalView {...props} />);
+  HistoricalView(props);
 
   const expectedData = {
     months: ['Jan', 'Feb', 'Mar'],

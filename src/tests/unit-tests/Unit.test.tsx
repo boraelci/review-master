@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import { HistoricalView, CategoricalView } from '../../views';
 
 import {
@@ -21,7 +20,7 @@ describe('CategoricalView', () => {
       provider: provider,
       chartWrapper: wrapper,
     };
-    render(<CategoricalView {...props} />);
+    CategoricalView(props);
     expect(getDataSpy).toHaveBeenCalledTimes(1);
   });
 });
@@ -41,7 +40,7 @@ describe('HistoricalView', () => {
       chartWrapper: wrapper,
     };
 
-    render(<HistoricalView {...props} />);
+    HistoricalView(props);
     expect(getDataSpy).toHaveBeenCalledTimes(1);
   });
 });
@@ -75,7 +74,7 @@ it('displays the categorical data correctly', () => {
     chartWrapper: chartWrapper,
   };
 
-  render(<CategoricalView {...props} />);
+  CategoricalView(props);
 
   const expectedData = {
     labels: labels,
