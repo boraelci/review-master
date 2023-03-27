@@ -48,12 +48,11 @@ Install dependencies
 
 ### `npm start`
 
-Run the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Start in developer mode
 
 ### `npm test`
 
-Run the test suite and show coverage information. A report is generated at [`./coverage/lcov-report/index.html`](./coverage/lcov-report/index.html)
+Run the test suite and show coverage information. A report is generated at `./coverage/lcov-report/index.html`
 
 ### `npm run lint`
 
@@ -66,3 +65,7 @@ Autoformat the code with `prettier`
 ### `npm run build`
 
 Build the app for production to the `dist` folder.
+
+## Contributing
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md)
