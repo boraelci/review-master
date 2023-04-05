@@ -40,7 +40,7 @@ A new HistoricalDataModel instance.
 
 #### Defined in
 
-[providers/HistoricalDataProvider.tsx:15](https://github.com/boraelci/review-master/blob/62f17c8/src/providers/HistoricalDataProvider.tsx#L15)
+[providers/HistoricalDataProvider.tsx:15](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/HistoricalDataProvider.tsx#L15)
 
 ___
 
@@ -62,4 +62,4 @@ An array of month labels.
 
 #### Defined in
 
-[providers/HistoricalDataProvider.tsx:47](https://github.com/boraelci/review-master/blob/62f17c8/src/providers/HistoricalDataProvider.tsx#L47)
+[providers/HistoricalDataProvider.tsx:47](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/HistoricalDataProvider.tsx#L47)

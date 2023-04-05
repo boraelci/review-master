@@ -38,7 +38,7 @@ A Line chart component with the specified options and data.
 
 #### Defined in
 
-[components/ChartWrapper.tsx:50](https://github.com/boraelci/review-master/blob/62f17c8/src/components/ChartWrapper.tsx#L50)
+[components/ChartWrapper.tsx:50](https://github.com/boraelci/review-master/blob/bfa07c8/src/components/ChartWrapper.tsx#L50)
 
 ___
 
@@ -63,4 +63,4 @@ A Radar chart component with the specified options and data.
 
 #### Defined in
 
-[components/ChartWrapper.tsx:29](https://github.com/boraelci/review-master/blob/62f17c8/src/components/ChartWrapper.tsx#L29)
+[components/ChartWrapper.tsx:29](https://github.com/boraelci/review-master/blob/bfa07c8/src/components/ChartWrapper.tsx#L29)
