@@ -14,7 +14,11 @@ I am actively using the [Project Board](https://github.com/users/boraelci/projec
 
 ## Example
 
-Visit http://review-master.s3-website-us-east-1.amazonaws.com
+Check out the example React application that uses this library at http://review-master.s3-website-us-east-1.amazonaws.com
+
+## Documentation
+
+Explore the docs at https://boraelci.github.io/review-master/
 
 ## Overview
 
