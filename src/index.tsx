@@ -23,3 +23,24 @@ export function Categorical() {
     />
   );
 }
+
+export function sienna() {
+  return (
+    <CategoricalView
+      title="Categorical View for # of Positive and Negative Reviews"
+      provider={new CategoricalDataProvider()}
+      chartWrapper={new ChartWrapper()}
+    />
+  );
+}
+
+export class Testing1 {
+  constructor() {
+    console.log('Testing1');
+  }
+
+  /**
+   * This function does that
+   */
+  public bora() {}
+}

@@ -4,7 +4,9 @@
 [![codecov](https://codecov.io/gh/boraelci/review-master/branch/main/graph/badge.svg)](https://codecov.io/gh/boraelci/review-master)
 [![NPM](https://img.shields.io/npm/v/review-master.svg)](https://www.npmjs.com/package/review-master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![MIT License](https://img.shields.io/github/license/boraelci/review-master) ![issues](https://img.shields.io/github/issues/boraelci/review-master)
+[![MIT License](https://img.shields.io/github/license/boraelci/review-master)](https://github.com/boraelci/review-master/blob/main/LICENSE)
+[![issues](https://img.shields.io/github/issues/boraelci/review-master)](https://github.com/boraelci/review-master/issues)
+[![Docs](https://img.shields.io/badge/docs-passing-success)](https://boraelci.github.io/review-master/)
 
 A library to visualize business intelligence derived from sentiment analysis on product reviews
 
@@ -36,7 +38,7 @@ class Example extends Component {
 
 ## Tests
 
-Unit integration tests can be found at [`./src/tests`](./src/tests) since this is the directory convention required by create-react-library with jest. The coverage report can be accessed at `./coverage/lcov-report/index.html`
+Unit integration tests can be found at [`./src/tests`](https://github.com/boraelci/review-master/tree/main/src/tests) since this is the directory convention required by create-react-library with jest. The coverage report can be accessed at `./coverage/lcov-report/index.html`
 
 ## Scripts
 
@@ -68,4 +70,4 @@ Build the app for production to the `dist` folder.
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+See [`CONTRIBUTING.md`](https://github.com/boraelci/review-master/blob/main/CONTRIBUTING.md)

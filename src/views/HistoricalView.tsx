@@ -7,6 +7,11 @@ interface HistoricalViewProps {
   chartWrapper: ChartWrapper;
 }
 
+/**
+ * This is a historical view that shows the number of positive and negative reviews
+ * @param props
+ * @returns
+ */
 export function HistoricalView(props: HistoricalViewProps) {
   const options = {
     responsive: true,
