@@ -1,6 +1,17 @@
 import { CategoricalDataModel } from '../models';
+import { DataProvider } from '.';
 
-export class CategoricalDataProvider {
+/**
+ * This class implements the DataProvider interface and provides methods
+ * for getting categorical data and labels.
+ */
+export class CategoricalDataProvider implements DataProvider {
+  /**
+   * This method returns a new CategoricalDataModel instance with the
+   * given positive and negative category counts.
+   *
+   * @returns {CategoricalDataModel} A new CategoricalDataModel instance.
+   */
   getData() {
     const positiveCategoryToCount: { [key: string]: number } = {
       Cost: 2,
@@ -24,6 +35,11 @@ export class CategoricalDataProvider {
     });
   }
 
+  /**
+   * This method returns an array of category labels.
+   *
+   * @returns {string[]} An array of category labels.
+   */
   getLabels() {
     return ['Cost', 'Quality', 'Durability', 'Effectiveness', 'Ease of use'];
   }

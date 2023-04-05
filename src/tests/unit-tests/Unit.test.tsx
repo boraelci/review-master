@@ -46,12 +46,12 @@ describe('HistoricalView', () => {
 });
 
 it('displays the categorical data correctly', () => {
-  const positiveCategoryToCount = {
+  const positiveCount = {
     a: 10,
     b: 20,
     c: 30,
   };
-  const negativeCategoryToCount = {
+  const negativeCount = {
     a: 5,
     b: 15,
     c: 25,
@@ -60,8 +60,8 @@ it('displays the categorical data correctly', () => {
   const provider = new CategoricalDataProvider();
   jest.spyOn(provider, 'getLabels').mockReturnValue(labels);
   jest.spyOn(provider, 'getData').mockReturnValue({
-    positiveCategoryToCount,
-    negativeCategoryToCount,
+    positiveCount,
+    negativeCount,
   });
 
   const chartWrapper = new ChartWrapper();
@@ -81,22 +81,14 @@ it('displays the categorical data correctly', () => {
     datasets: [
       {
         label: 'Positive',
-        data: [
-          positiveCategoryToCount.a,
-          positiveCategoryToCount.b,
-          positiveCategoryToCount.c,
-        ],
+        data: [positiveCount.a, positiveCount.b, positiveCount.c],
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1,
       },
       {
         label: 'Negative',
-        data: [
-          negativeCategoryToCount.a,
-          negativeCategoryToCount.b,
-          negativeCategoryToCount.c,
-        ],
+        data: [negativeCount.a, negativeCount.b, negativeCount.c],
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
         borderWidth: 1,
@@ -114,16 +106,16 @@ describe('CategoricalDataProvider', () => {
     const labels = provider.getLabels();
     const expectedMinCount = 5;
 
-    expect(
-      Object.keys(data.positiveCategoryToCount).length,
-    ).toBeGreaterThanOrEqual(expectedMinCount);
-    expect(
-      Object.keys(data.negativeCategoryToCount).length,
-    ).toBeGreaterThanOrEqual(expectedMinCount);
+    expect(Object.keys(data.positiveCount).length).toBeGreaterThanOrEqual(
+      expectedMinCount,
+    );
+    expect(Object.keys(data.negativeCount).length).toBeGreaterThanOrEqual(
+      expectedMinCount,
+    );
 
     labels.forEach((label) => {
-      expect(data.positiveCategoryToCount).toHaveProperty(label);
-      expect(data.negativeCategoryToCount).toHaveProperty(label);
+      expect(data.positiveCount).toHaveProperty(label);
+      expect(data.negativeCount).toHaveProperty(label);
     });
   });
 });
@@ -132,19 +124,19 @@ describe('HistoricalDataProvider', () => {
   it('should return data with more than 5 elements and all months should be present', () => {
     const provider = new HistoricalDataProvider();
     const data = provider.getData();
-    const months = provider.getMonths();
+    const months = provider.getLabels();
     const expectedMinCount = 5;
 
-    expect(
-      Object.keys(data.positiveMonthToCount).length,
-    ).toBeGreaterThanOrEqual(expectedMinCount);
-    expect(
-      Object.keys(data.negativeMonthToCount).length,
-    ).toBeGreaterThanOrEqual(expectedMinCount);
+    expect(Object.keys(data.positiveCount).length).toBeGreaterThanOrEqual(
+      expectedMinCount,
+    );
+    expect(Object.keys(data.negativeCount).length).toBeGreaterThanOrEqual(
+      expectedMinCount,
+    );
 
     months.forEach((month) => {
-      expect(data.positiveMonthToCount).toHaveProperty(month);
-      expect(data.negativeMonthToCount).toHaveProperty(month);
+      expect(data.positiveCount).toHaveProperty(month);
+      expect(data.negativeCount).toHaveProperty(month);
     });
   });
 });

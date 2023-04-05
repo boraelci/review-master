@@ -3,21 +3,21 @@ import { HistoricalDataProvider } from '../../providers';
 import { HistoricalView } from '../../views';
 
 it('displays the historical data correctly', () => {
-  const positiveMonthToCount = {
+  const positiveCount = {
     Jan: 10,
     Feb: 20,
     Mar: 30,
   };
-  const negativeMonthToCount = {
+  const negativeCount = {
     Jan: 5,
     Feb: 15,
     Mar: 25,
   };
   const provider = new HistoricalDataProvider();
-  jest.spyOn(provider, 'getMonths').mockReturnValue(['Jan', 'Feb', 'Mar']);
+  jest.spyOn(provider, 'getLabels').mockReturnValue(['Jan', 'Feb', 'Mar']);
   jest
     .spyOn(provider, 'getData')
-    .mockReturnValue({ positiveMonthToCount, negativeMonthToCount });
+    .mockReturnValue({ positiveCount, negativeCount });
 
   const chartWrapper = new ChartWrapper();
   const lineMock = jest.fn();
@@ -36,13 +36,13 @@ it('displays the historical data correctly', () => {
     datasets: [
       {
         label: 'Positive',
-        data: positiveMonthToCount,
+        data: positiveCount,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
       {
         label: 'Negative',
-        data: negativeMonthToCount,
+        data: negativeCount,
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },

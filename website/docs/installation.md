@@ -1,18 +1,12 @@
 ---
-id: install
-title: Install
+id: installation
+title: Installation
 ---
 
-To get started with the `my-typescript-react-library`, install it as a dependency in your project:
+To get started with the `review-master`, install it as a dependency in your project:
 
 ```bash
-npm install my-typescript-react-library2
-```
-
-Or using Yarn:
-
-```bash
-yarn add my-typescript-react-library
+npm install --save review-master
 ```
 
 Make sure you have the required peer dependencies installed as well:

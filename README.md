@@ -12,6 +12,10 @@ A library to visualize business intelligence derived from sentiment analysis on 
 
 I am actively using the [Project Board](https://github.com/users/boraelci/projects/2/views/1) and [Pull Requests](https://github.com/boraelci/review-master/pulls?q=is%3Apr+is%3Aclosed) for new features and bugs. Please check them out to better understand the development of this project.
 
+## Example
+
+Visit http://review-master.s3-website-us-east-1.amazonaws.com
+
 ## Overview
 
 Let's imagine a pair of headphones, listed on an e-commerce website, that has thousands of customer reviews associated with it. The seller can read through all of them but it would be time-consuming. When sentiment analysis is performed on these reviews, the results would show what percentage of the customers think the product is cheap/expensive, durable/short-lived, or high-quality/low-quality and more. This library allows visualizing the business intelligence derived from these results with features such as a historical view of sentiment change.
@@ -24,14 +28,37 @@ npm install --save review-master
 
 ## Usage
 
+Below is an example with built-in, sample DataProviders. To display custom values, Create your own DataProvider by implementing that interface, with getData() and getLabels() methods.
+
 ```tsx
 import React, { Component } from 'react';
 
-import Historical from 'review-master';
+import {
+  HistoricalView,
+  HistoricalDataProvider,
+  CategoricalView,
+  CategoricalDataProvider,
+  ChartWrapper,
+} from 'review-master';
 
 class Example extends Component {
   render() {
-    return <Historical />;
+    return (
+      <>
+        (
+        <HistoricalView
+          title="Historical View for Monthly # of Positive and Negative Reviews"
+          provider={new HistoricalDataProvider()}
+          chartWrapper={new ChartWrapper()}
+        />
+        <CategoricalView
+          title="Categorical View for # of Positive and Negative Reviews"
+          provider={new CategoricalDataProvider()}
+          chartWrapper={new ChartWrapper()}
+        />
+        );
+      </>
+    );
   }
 }
 ```
