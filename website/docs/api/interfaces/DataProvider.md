@@ -30,7 +30,7 @@ Data from the provider.
 
 #### Defined in
 
-[providers/DataProvider.tsx:11](https://github.com/boraelci/review-master/blob/62f17c8/src/providers/DataProvider.tsx#L11)
+[providers/DataProvider.tsx:11](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/DataProvider.tsx#L11)
 
 ___
 
@@ -48,4 +48,4 @@ An array of labels.
 
 #### Defined in
 
-[providers/DataProvider.tsx:18](https://github.com/boraelci/review-master/blob/62f17c8/src/providers/DataProvider.tsx#L18)
+[providers/DataProvider.tsx:18](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/DataProvider.tsx#L18)

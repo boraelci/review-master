@@ -40,7 +40,7 @@ A radar chart displaying the categorical data.
 
 #### Defined in
 
-[views/CategoricalView.tsx:21](https://github.com/boraelci/review-master/blob/62f17c8/src/views/CategoricalView.tsx#L21)
+[views/CategoricalView.tsx:21](https://github.com/boraelci/review-master/blob/bfa07c8/src/views/CategoricalView.tsx#L21)
 
 ___
 
@@ -66,4 +66,4 @@ A line chart displaying the historical review data.
 
 #### Defined in
 
-[views/HistoricalView.tsx:21](https://github.com/boraelci/review-master/blob/62f17c8/src/views/HistoricalView.tsx#L21)
+[views/HistoricalView.tsx:21](https://github.com/boraelci/review-master/blob/bfa07c8/src/views/HistoricalView.tsx#L21)

@@ -40,7 +40,7 @@ A new CategoricalDataModel instance.
 
 #### Defined in
 
-[providers/CategoricalDataProvider.tsx:15](https://github.com/boraelci/review-master/blob/62f17c8/src/providers/CategoricalDataProvider.tsx#L15)
+[providers/CategoricalDataProvider.tsx:15](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/CategoricalDataProvider.tsx#L15)
 
 ___
 
@@ -62,4 +62,4 @@ An array of category labels.
 
 #### Defined in
 
-[providers/CategoricalDataProvider.tsx:43](https://github.com/boraelci/review-master/blob/62f17c8/src/providers/CategoricalDataProvider.tsx#L43)
+[providers/CategoricalDataProvider.tsx:43](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/CategoricalDataProvider.tsx#L43)
