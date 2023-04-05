@@ -1,6 +1,17 @@
 import { HistoricalDataModel } from '../models';
+import { DataProvider } from '.';
 
-export class HistoricalDataProvider {
+/**
+ * This class implements the DataProvider interface and provides methods
+ * for getting historical data and labels.
+ */
+export class HistoricalDataProvider implements DataProvider {
+  /**
+   * This method returns a new HistoricalDataModel instance with the
+   * given positive and negative counts per month.
+   *
+   * @returns {HistoricalDataModel} A new HistoricalDataModel instance.
+   */
   getData() {
     const positiveMonthToCount: { [key: string]: number } = {
       January: 10,
@@ -28,7 +39,12 @@ export class HistoricalDataProvider {
     });
   }
 
-  getMonths() {
+  /**
+   * This method returns an array of month labels.
+   *
+   * @returns {string[]} An array of month labels.
+   */
+  getLabels() {
     return ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   }
 }

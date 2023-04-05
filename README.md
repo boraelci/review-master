@@ -4,11 +4,17 @@
 [![codecov](https://codecov.io/gh/boraelci/review-master/branch/main/graph/badge.svg)](https://codecov.io/gh/boraelci/review-master)
 [![NPM](https://img.shields.io/npm/v/review-master.svg)](https://www.npmjs.com/package/review-master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![MIT License](https://img.shields.io/github/license/boraelci/review-master) ![issues](https://img.shields.io/github/issues/boraelci/review-master)
+[![MIT License](https://img.shields.io/github/license/boraelci/review-master)](https://github.com/boraelci/review-master/blob/main/LICENSE)
+[![issues](https://img.shields.io/github/issues/boraelci/review-master)](https://github.com/boraelci/review-master/issues)
+[![Docs](https://img.shields.io/badge/docs-passing-success)](https://boraelci.github.io/review-master/)
 
 A library to visualize business intelligence derived from sentiment analysis on product reviews
 
 I am actively using the [Project Board](https://github.com/users/boraelci/projects/2/views/1) and [Pull Requests](https://github.com/boraelci/review-master/pulls?q=is%3Apr+is%3Aclosed) for new features and bugs. Please check them out to better understand the development of this project.
+
+## Example
+
+Visit http://review-master.s3-website-us-east-1.amazonaws.com
 
 ## Overview
 
@@ -22,21 +28,44 @@ npm install --save review-master
 
 ## Usage
 
+Below is an example with built-in, sample DataProviders. To display custom values, Create your own DataProvider by implementing that interface, with getData() and getLabels() methods.
+
 ```tsx
 import React, { Component } from 'react';
 
-import Historical from 'review-master';
+import {
+  HistoricalView,
+  HistoricalDataProvider,
+  CategoricalView,
+  CategoricalDataProvider,
+  ChartWrapper,
+} from 'review-master';
 
 class Example extends Component {
   render() {
-    return <Historical />;
+    return (
+      <>
+        (
+        <HistoricalView
+          title="Historical View for Monthly # of Positive and Negative Reviews"
+          provider={new HistoricalDataProvider()}
+          chartWrapper={new ChartWrapper()}
+        />
+        <CategoricalView
+          title="Categorical View for # of Positive and Negative Reviews"
+          provider={new CategoricalDataProvider()}
+          chartWrapper={new ChartWrapper()}
+        />
+        );
+      </>
+    );
   }
 }
 ```
 
 ## Tests
 
-Unit integration tests can be found at [`./src/tests`](./src/tests) since this is the directory convention required by create-react-library with jest. The coverage report can be accessed at `./coverage/lcov-report/index.html`
+Unit integration tests can be found at [`./src/tests`](https://github.com/boraelci/review-master/tree/main/src/tests) since this is the directory convention required by create-react-library with jest. The coverage report can be accessed at `./coverage/lcov-report/index.html`
 
 ## Scripts
 
@@ -68,4 +97,4 @@ Build the app for production to the `dist` folder.
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+See [`CONTRIBUTING.md`](https://github.com/boraelci/review-master/blob/main/CONTRIBUTING.md)
