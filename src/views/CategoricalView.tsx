@@ -1,10 +1,9 @@
-import { CategoricalDataProvider } from '../providers';
 import { ChartWrapper } from '../components';
+import { CategoricalDataModel } from '../models';
 
 interface CategoricalViewProps {
-  title: string;
-  provider: CategoricalDataProvider;
   chartWrapper: ChartWrapper;
+  categoricalDataModel: CategoricalDataModel;
 }
 
 /**
@@ -19,43 +18,40 @@ interface CategoricalViewProps {
  * @returns {React.ReactNode} A radar chart displaying the categorical data.
  */
 export function CategoricalView(props: CategoricalViewProps) {
+  let positiveData = props.categoricalDataModel.positiveData;
+  let negativeData = props.categoricalDataModel.negativeData;
+
+  const title = 'Review Counts by Category';
+
+  const labels = positiveData.map((data) => data.category);
+  const positiveCount = positiveData.map((data) => data.count);
+  const negativeCount = negativeData.map((data) => data.count);
+
   const options = {
     responsive: true,
     plugins: {
-      legend: {
-        position: 'top' as const,
-      },
-      title: {
-        display: !!props.title,
-        text: props.title,
-      },
+      legend: { position: 'top' as const },
+      title: { display: !!title, text: title },
     },
   };
-
-  const provider = props.provider;
-  const categoricalData = provider.getData();
-  const labels = provider.getLabels();
 
   const data = {
     labels: labels,
     datasets: [
       {
         label: 'Positive',
-        data: Object.values(categoricalData.positiveCount),
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1,
+        data: positiveCount,
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
       {
         label: 'Negative',
-        data: Object.values(categoricalData.negativeCount),
+        data: negativeCount,
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
-        borderWidth: 1,
       },
     ],
   };
 
-  return props.chartWrapper.radar(options, data);
-  // return <Radar options={options} data={data} />;
+  return props.chartWrapper.line(options, data);
 }

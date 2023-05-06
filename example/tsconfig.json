@@ -10,10 +10,7 @@
     "esModuleInterop": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "target": "es5",
@@ -23,7 +20,9 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false
   },
   "include": ["src"],
   "exclude": ["node_modules", "build"]

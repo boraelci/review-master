@@ -1,10 +1,10 @@
 import { ChartWrapper } from '../components';
-import { HistoricalDataProvider } from '../providers';
+
+import { HistoricalDataModel } from '../models';
 
 interface HistoricalViewProps {
-  title: string;
-  provider: HistoricalDataProvider;
   chartWrapper: ChartWrapper;
+  historicalDataModel: HistoricalDataModel;
 }
 
 /**
@@ -19,35 +19,42 @@ interface HistoricalViewProps {
  * @returns {React.ReactNode} A line chart displaying the historical review data.
  */
 export function HistoricalView(props: HistoricalViewProps) {
+  let positiveData = props.historicalDataModel.positiveData;
+  let negativeData = props.historicalDataModel.negativeData;
+
+  const title = 'Review Counts by Day';
+  // Replace the hardcoded months, positiveCount, and negativeCount
+  positiveData.sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+  );
+  negativeData.sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+  );
+
+  const labels = positiveData.map((data) => data.date);
+  const positiveCount = positiveData.map((data) => data.count);
+  const negativeCount = negativeData.map((data) => data.count);
+
   const options = {
     responsive: true,
     plugins: {
-      legend: {
-        position: 'top' as const,
-      },
-      title: {
-        display: !!props.title,
-        text: props.title,
-      },
+      legend: { position: 'top' as const },
+      title: { display: !!title, text: title },
     },
   };
 
-  const provider = props.provider;
-  const months = provider.getLabels();
-  const historicalData = provider.getData();
-
   const data = {
-    months,
+    labels: labels,
     datasets: [
       {
         label: 'Positive',
-        data: historicalData.positiveCount,
+        data: positiveCount,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
       {
         label: 'Negative',
-        data: historicalData.negativeCount,
+        data: negativeCount,
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },

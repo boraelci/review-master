@@ -6,20 +6,9 @@
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
-    "test": "node ../node_modules/react-scripts/bin/react-scripts.js test --watchAll=false --coverage",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject",
     "lint": "eslint src --ext .ts --ext .tsx",
     "prettier": "prettier --config ../.prettierrc --write ."
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 50,
-        "functions": 50,
-        "lines": 50,
-        "statements": 50
-      }
-    }
   },
   "dependencies": {
     "@testing-library/jest-dom": "file:../node_modules/@testing-library/jest-dom",

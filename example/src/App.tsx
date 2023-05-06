@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
+/*
 import {
   HistoricalView,
   HistoricalDataProvider,
   CategoricalView,
   CategoricalDataProvider,
   ChartWrapper,
-} from 'review-master';
+} from 'review-master';*/
+import { API_GATEWAY_ENDPOINT } from './Config';
+import { AnalysisPage, HistoricalDataModel } from 'review-master';
 
+/*
 const App = () => {
   return (
     <div>
@@ -47,6 +51,45 @@ const App = () => {
       </div>
     </div>
   );
+};*/
+
+const product_id = 'bff45201-5d50-47e1-a191-464713897cd6';
+
+const App = () => {
+  const [positiveData, setPositiveData] = useState<
+    { date: string; count: number }[]
+  >([]);
+  const [negativeData, setNegativeData] = useState<
+    { date: string; count: number }[]
+  >([]);
+
+  useEffect(() => {
+    fetch(`${API_GATEWAY_ENDPOINT}/analyses/${product_id}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log(data.body.historical_data);
+        // Store the data in the states
+        setPositiveData(data.body.historical_data.positive);
+        setNegativeData(data.body.historical_data.negative);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  let historicalDataModel = new HistoricalDataModel({
+    positiveData,
+    negativeData,
+  });
+
+  // Pass the data to the HistoricalView component
+  return <AnalysisPage historicalDataModel={historicalDataModel} />;
 };
 
 export default App;

@@ -1,16 +1,14 @@
-import { DataModel } from '.';
-
 export interface HistoricalDataModelProps {
-  readonly positiveMonthToCount: { [key: string]: number };
-  readonly negativeMonthToCount: { [key: string]: number };
+  positiveData: { date: string; count: number }[];
+  negativeData: { date: string; count: number }[];
 }
 
-export class HistoricalDataModel implements DataModel {
-  readonly positiveCount: { [key: string]: number };
-  readonly negativeCount: { [key: string]: number };
+export class HistoricalDataModel {
+  positiveData: { date: string; count: number }[];
+  negativeData: { date: string; count: number }[];
 
   constructor(props: HistoricalDataModelProps) {
-    this.positiveCount = props.positiveMonthToCount;
-    this.negativeCount = props.negativeMonthToCount;
+    this.positiveData = props.positiveData;
+    this.negativeData = props.negativeData;
   }
 }
