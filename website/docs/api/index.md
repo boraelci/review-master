@@ -1,7 +1,7 @@
 ---
-id: "index"
-title: "review-master"
-sidebar_label: "Exports"
+id: 'index'
+title: 'review-master'
+sidebar_label: 'Exports'
 sidebar_position: 0.5
 custom_edit_url: null
 ---
@@ -28,8 +28,8 @@ positive and negative category counts provided by the given CategoricalDataProvi
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type                   | Description                                       |
+| :------ | :--------------------- | :------------------------------------------------ |
 | `props` | `CategoricalViewProps` | The properties for the CategoricalView component. |
 
 #### Returns
@@ -42,7 +42,7 @@ A radar chart displaying the categorical data.
 
 [views/CategoricalView.tsx:21](https://github.com/boraelci/review-master/blob/bfa07c8/src/views/CategoricalView.tsx#L21)
 
-___
+---
 
 ### HistoricalView
 
@@ -54,8 +54,8 @@ positive and negative review counts over time provided by the given HistoricalDa
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type                  | Description                                      |
+| :------ | :-------------------- | :----------------------------------------------- |
 | `props` | `HistoricalViewProps` | The properties for the HistoricalView component. |
 
 #### Returns

@@ -18,11 +18,15 @@
     "@types/node": "file:../node_modules/@types/node",
     "@types/react": "file:../node_modules/@types/react",
     "@types/react-dom": "file:../node_modules/@types/react-dom",
-    "react": "file:../node_modules/react",
+    "bootstrap": "file:../node_modules/bootstrap",
     "react-dom": "file:../node_modules/react-dom",
+    "review-master": "file:..",
     "react-scripts": "file:../node_modules/react-scripts",
     "typescript": "file:../node_modules/typescript",
-    "review-master": "file:.."
+    "react": "file:../node_modules/react",
+    "react-bootstrap": "file:../node_modules/react-bootstrap",
+    "chart.js": "file:../node_modules/chart.js",
+    "react-chartjs-2": "file:../node_modules/react-chartjs-2"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"

@@ -1,7 +1,7 @@
 ---
-id: "CategoricalDataProvider"
-title: "Class: CategoricalDataProvider"
-sidebar_label: "CategoricalDataProvider"
+id: 'CategoricalDataProvider'
+title: 'Class: CategoricalDataProvider'
+sidebar_label: 'CategoricalDataProvider'
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -42,7 +42,7 @@ A new CategoricalDataModel instance.
 
 [providers/CategoricalDataProvider.tsx:15](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/CategoricalDataProvider.tsx#L15)
 
-___
+---
 
 ### getLabels
 

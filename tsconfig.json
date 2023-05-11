@@ -24,6 +24,6 @@
     "noImplicitAny": false,
     "noUnusedLocals": false
   },
-  "include": ["src"],
+  "include": ["src", "example/src/AnalysisPage.tsx"],
   "exclude": ["node_modules", "dist", "example"]
 }

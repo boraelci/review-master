@@ -1,7 +1,7 @@
 ---
-id: "HistoricalDataProvider"
-title: "Class: HistoricalDataProvider"
-sidebar_label: "HistoricalDataProvider"
+id: 'HistoricalDataProvider'
+title: 'Class: HistoricalDataProvider'
+sidebar_label: 'HistoricalDataProvider'
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -42,7 +42,7 @@ A new HistoricalDataModel instance.
 
 [providers/HistoricalDataProvider.tsx:15](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/HistoricalDataProvider.tsx#L15)
 
-___
+---
 
 ### getLabels
 
