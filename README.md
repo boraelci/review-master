@@ -8,28 +8,42 @@
 [![issues](https://img.shields.io/github/issues/boraelci/review-master)](https://github.com/boraelci/review-master/issues)
 [![Docs](https://img.shields.io/badge/docs-passing-success)](https://boraelci.github.io/review-master/)
 
-A library to visualize business intelligence derived from sentiment analysis on product reviews
+## Overview
 
-I am actively using the [Project Board](https://github.com/users/boraelci/projects/2/views/1) and [Pull Requests](https://github.com/boraelci/review-master/pulls?q=is%3Apr+is%3Aclosed) for new features and bugs. Please check them out to better understand the development of this project.
+Review Insights is a powerful library designed to help businesses visualize and understand customer sentiment from product reviews. With the increasing number of reviews left by customers on e-commerce platforms, it becomes a daunting task for sellers to manually read and analyze them all. This library simplifies this process by presenting the insights derived from sentiment analysis in a visually appealing and easily digestible manner.
+
+Imagine a pair of headphones listed on an e-commerce website with thousands of customer reviews. By using sentiment analysis, we can determine what percentage of customers think the product is cheap or expensive and high-quality or low-quality, among other aspects. This library takes these results and presents them in an interactive and engaging way, allowing sellers to make informed decisions based on the overall customer sentiment.
+
+Key features include:
+
+- **Historical View**: Track and visualize the changes in customer sentiment over time, enabling you to see how product improvements, price changes, or marketing campaigns have influenced customer perception.
+
+- **Categorical View**: Dive deeper into specific aspects of the product, such as price, quality, or durability, and see how customers feel about each of them.
+
+- **Statistical Analysis of Star Ratings**: Get a comprehensive statistical analysis of the star ratings customers give to your products. This includes mean, median, standard deviation, and quartiles, helping you to better understand the distribution and trends of customer satisfaction.
 
 ## Example
 
-Check out the example React application at http://review-master.s3-website-us-east-1.amazonaws.com
+Check out the example React application at http://review-master.s3-website-us-east-1.amazonaws.com/
 
-![Example](https://github.com/boraelci/review-master/blob/main/example.png)
+[![Example](images/example-app.png)](http://review-master.s3-website-us-east-1.amazonaws.com)
 
 ## Documentation
 
 Explore the docs at https://boraelci.github.io/review-master/
 
-## Overview
-
-Let's imagine a pair of headphones, listed on an e-commerce website, that has thousands of customer reviews associated with it. The seller can read through all of them but it would be time-consuming. When sentiment analysis is performed on these reviews, the results would show what percentage of the customers think the product is cheap/expensive, durable/short-lived, or high-quality/low-quality and more. This library allows visualizing the business intelligence derived from these results with features such as a historical view of sentiment change.
-
 ## Install
+
+To get started with the `review-master`, install it as a dependency in your project:
 
 ```bash
 npm install --save review-master
+```
+
+Make sure you have the required peer dependencies installed as well:
+
+```bash
+npm install react react-dom chart.js react-chartjs-2 bootstrap react-bootstrap
 ```
 
 ## Usage
@@ -37,41 +51,40 @@ npm install --save review-master
 Below is an example with built-in, sample DataProviders. To display custom values, Create your own DataProvider by implementing that interface, with getData() and getLabels() methods.
 
 ```tsx
-import React, { Component } from 'react';
-
+import { Chart as ChartJS, registerables } from 'chart.js';
+import { Line, Radar } from 'react-chartjs-2';
 import {
-  HistoricalView,
-  HistoricalDataProvider,
-  CategoricalView,
-  CategoricalDataProvider,
-  ChartWrapper,
+  AnalysisModel,
+  CategoricalViewer,
+  HistoricalViewer,
+  StarsViewer,
 } from 'review-master';
+ChartJS.register(...registerables);
+import sampleData from './data/analysisResponse.json';
 
-class Example extends Component {
-  render() {
-    return (
-      <>
-        (
-        <HistoricalView
-          title="Historical View for Monthly # of Positive and Negative Reviews"
-          provider={new HistoricalDataProvider()}
-          chartWrapper={new ChartWrapper()}
-        />
-        <CategoricalView
-          title="Categorical View for # of Positive and Negative Reviews"
-          provider={new CategoricalDataProvider()}
-          chartWrapper={new ChartWrapper()}
-        />
-        );
-      </>
-    );
-  }
-}
+const analysisModel = new AnalysisModel(sampleData);
+const historicalViewer = new HistoricalViewer(analysisModel, 'day');
+const categoricalViewer = new CategoricalViewer(analysisModel);
+const starsViewer = new StarsViewer(analysisModel);
+
+const { options: historicalOptions, data: historicalData } =
+  historicalViewer.getOptionsAndData();
+const { options: categoricalOptions, data: categoricalData } =
+  categoricalViewer.getOptionsAndData();
+
+return <Line options={historicalOptions} data={historicalData} />;
+// or <Radar options={categoricalOptions} data={categoricalData} />
+// or starsViewer.createTable()
 ```
 
 ## Tests
 
-Unit integration tests can be found at [`./src/tests`](https://github.com/boraelci/review-master/tree/main/src/tests) since this is the directory convention required by create-react-library with jest. The coverage report can be accessed at `./coverage/lcov-report/index.html`
+Unit and integration tests can be found at [`./src/tests`](https://github.com/boraelci/review-master/tree/main/src/tests) since this is the directory convention required by create-react-library with jest. The coverage report can be accessed at `./coverage/lcov-report/index.html`. The latest report indicates:
+
+Test Suites: 6 passed, 6 total
+Tests: 27 passed, 27 total
+Snapshots: 0 total
+Time: 0.857 s, estimated 1 s
 
 ## Scripts
 
