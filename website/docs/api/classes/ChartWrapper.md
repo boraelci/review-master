@@ -1,7 +1,7 @@
 ---
-id: "ChartWrapper"
-title: "Class: ChartWrapper"
-sidebar_label: "ChartWrapper"
+id: 'ChartWrapper'
+title: 'Class: ChartWrapper'
+sidebar_label: 'ChartWrapper'
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -25,10 +25,10 @@ Renders a Line chart with the given options and data.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `any` | Configuration options for the line chart. |
-| `data` | `any` | The data to be displayed in the line chart. |
+| Name      | Type  | Description                                 |
+| :-------- | :---- | :------------------------------------------ |
+| `options` | `any` | Configuration options for the line chart.   |
+| `data`    | `any` | The data to be displayed in the line chart. |
 
 #### Returns
 
@@ -40,7 +40,7 @@ A Line chart component with the specified options and data.
 
 [components/ChartWrapper.tsx:50](https://github.com/boraelci/review-master/blob/bfa07c8/src/components/ChartWrapper.tsx#L50)
 
-___
+---
 
 ### radar
 
@@ -50,10 +50,10 @@ Renders a Radar chart with the given options and data.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `any` | Configuration options for the radar chart. |
-| `data` | `any` | The data to be displayed in the radar chart. |
+| Name      | Type  | Description                                  |
+| :-------- | :---- | :------------------------------------------- |
+| `options` | `any` | Configuration options for the radar chart.   |
+| `data`    | `any` | The data to be displayed in the radar chart. |
 
 #### Returns
 

@@ -24,7 +24,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       ],
     ],
     title: 'Review Master',
-    tagline: 'A library to visualize business intelligence derived from sentiment analysis on product reviews',
+    tagline:
+      'A library to visualize business intelligence derived from sentiment analysis on product reviews',
     url: 'https://boraelci.github.io',
     baseUrl: '/review-master/',
     onBrokenLinks: 'throw',

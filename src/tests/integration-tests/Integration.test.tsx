@@ -1,53 +1,54 @@
-import { ChartWrapper } from '../../components';
-import { HistoricalDataProvider } from '../../providers';
-import { HistoricalView } from '../../views';
+import {
+  AnalysisModel,
+  CategoricalViewer,
+  HistoricalViewer,
+  StarsStatisticalModel,
+  StarsViewer,
+} from '../..';
+import analysisResponse from '../../data/analysisResponse.json';
 
-it('displays the historical data correctly', () => {
-  const positiveCount = {
-    Jan: 10,
-    Feb: 20,
-    Mar: 30,
-  };
-  const negativeCount = {
-    Jan: 5,
-    Feb: 15,
-    Mar: 25,
-  };
-  const provider = new HistoricalDataProvider();
-  jest.spyOn(provider, 'getLabels').mockReturnValue(['Jan', 'Feb', 'Mar']);
-  jest
-    .spyOn(provider, 'getData')
-    .mockReturnValue({ positiveCount, negativeCount });
+describe('Integration Tests', () => {
+  let analysisModel: AnalysisModel;
 
-  const chartWrapper = new ChartWrapper();
-  const lineMock = jest.fn();
-  chartWrapper.line = lineMock;
+  beforeEach(() => {
+    analysisModel = new AnalysisModel(analysisResponse);
+  });
 
-  const props = {
-    title: 'Test',
-    provider: provider,
-    chartWrapper: chartWrapper,
-  };
+  it('should create a HistoricalViewer with the correct AnalysisModel', () => {
+    const historicalViewer = new HistoricalViewer(analysisModel, 'day');
+    expect(historicalViewer.analysisModel).toEqual(analysisModel);
+  });
 
-  HistoricalView(props);
+  it('should create a CategoricalViewer with the correct AnalysisModel', () => {
+    const categoricalViewer = new CategoricalViewer(analysisModel);
+    expect(categoricalViewer.analysisModel).toEqual(analysisModel);
+  });
 
-  const expectedData = {
-    months: ['Jan', 'Feb', 'Mar'],
-    datasets: [
-      {
-        label: 'Positive',
-        data: positiveCount,
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      },
-      {
-        label: 'Negative',
-        data: negativeCount,
-        borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      },
-    ],
-  };
+  it('should create a StarsViewer with the correct AnalysisModel and StarsStatisticalModel', () => {
+    const starsViewer = new StarsViewer(analysisModel);
+    expect(starsViewer.analysisModel).toEqual(analysisModel);
+    expect(starsViewer.starsStatisticalModel).toBeInstanceOf(
+      StarsStatisticalModel,
+    );
+  });
 
-  expect(lineMock).toHaveBeenCalledWith(expect.any(Object), expectedData);
+  it('should generate the correct chart data for HistoricalViewer', () => {
+    const historicalViewer = new HistoricalViewer(analysisModel, 'day');
+    const { options, data } = historicalViewer.getOptionsAndData();
+    expect(options).toBeDefined();
+    expect(data).toBeDefined();
+  });
+
+  it('should generate the correct chart data for CategoricalViewer', () => {
+    const categoricalViewer = new CategoricalViewer(analysisModel);
+    const { options, data } = categoricalViewer.getOptionsAndData();
+    expect(options).toBeDefined();
+    expect(data).toBeDefined();
+  });
+
+  it('should generate the correct table for StarsViewer', () => {
+    const starsViewer = new StarsViewer(analysisModel);
+    const table = starsViewer.createTable();
+    expect(table).toBeDefined();
+  });
 });

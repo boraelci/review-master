@@ -1,7 +1,7 @@
 ---
-id: "DataProvider"
-title: "Interface: DataProvider"
-sidebar_label: "DataProvider"
+id: 'DataProvider'
+title: 'Interface: DataProvider'
+sidebar_label: 'DataProvider'
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -32,7 +32,7 @@ Data from the provider.
 
 [providers/DataProvider.tsx:11](https://github.com/boraelci/review-master/blob/bfa07c8/src/providers/DataProvider.tsx#L11)
 
-___
+---
 
 ### getLabels
 

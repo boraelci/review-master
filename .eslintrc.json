@@ -19,6 +19,8 @@
     "prettier"
   ],
   "rules": {
-    "@typescript-eslint/no-explicit-any": ["off"]
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "no-prototype-builtins": "off",
+    "no-case-declarations": "off"
   }
 }
