@@ -37,7 +37,7 @@ Constructs a HistoricalViewer instance.
 
 #### Defined in
 
-[components/HistoricalViewer.tsx:59](https://github.com/boraelci/review-master/blob/c571097/src/components/HistoricalViewer.tsx#L59)
+[components/HistoricalViewer.tsx:59](https://github.com/boraelci/review-master/blob/2367247/src/components/HistoricalViewer.tsx#L59)
 
 ## Properties
 
@@ -47,7 +47,7 @@ Constructs a HistoricalViewer instance.
 
 #### Defined in
 
-[components/HistoricalViewer.tsx:50](https://github.com/boraelci/review-master/blob/c571097/src/components/HistoricalViewer.tsx#L50)
+[components/HistoricalViewer.tsx:50](https://github.com/boraelci/review-master/blob/2367247/src/components/HistoricalViewer.tsx#L50)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[components/HistoricalViewer.tsx:51](https://github.com/boraelci/review-master/blob/c571097/src/components/HistoricalViewer.tsx#L51)
+[components/HistoricalViewer.tsx:51](https://github.com/boraelci/review-master/blob/2367247/src/components/HistoricalViewer.tsx#L51)
 
 ## Methods
 
@@ -75,7 +75,7 @@ An object containing labels and positive/negative review counts.
 
 #### Defined in
 
-[components/HistoricalViewer.tsx:102](https://github.com/boraelci/review-master/blob/c571097/src/components/HistoricalViewer.tsx#L102)
+[components/HistoricalViewer.tsx:102](https://github.com/boraelci/review-master/blob/2367247/src/components/HistoricalViewer.tsx#L102)
 
 ___
 
@@ -99,7 +99,7 @@ The formatted data for rendering a ChartJS chart.
 
 #### Defined in
 
-[components/HistoricalViewer.tsx:171](https://github.com/boraelci/review-master/blob/c571097/src/components/HistoricalViewer.tsx#L171)
+[components/HistoricalViewer.tsx:171](https://github.com/boraelci/review-master/blob/2367247/src/components/HistoricalViewer.tsx#L171)
 
 ___
 
@@ -123,7 +123,7 @@ A unique date key for the specified dateString.
 
 #### Defined in
 
-[components/HistoricalViewer.tsx:140](https://github.com/boraelci/review-master/blob/c571097/src/components/HistoricalViewer.tsx#L140)
+[components/HistoricalViewer.tsx:140](https://github.com/boraelci/review-master/blob/2367247/src/components/HistoricalViewer.tsx#L140)
 
 ___
 
@@ -146,4 +146,4 @@ An object containing chart options and data formatted for ChartJS.
 
 #### Defined in
 
-[components/HistoricalViewer.tsx:69](https://github.com/boraelci/review-master/blob/c571097/src/components/HistoricalViewer.tsx#L69)
+[components/HistoricalViewer.tsx:69](https://github.com/boraelci/review-master/blob/2367247/src/components/HistoricalViewer.tsx#L69)

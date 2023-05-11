@@ -29,7 +29,7 @@ Creates a new StarsStatisticalModel instance.
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:22](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L22)
+[components/StarsStatisticalModel.tsx:22](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L22)
 
 ## Properties
 
@@ -39,7 +39,7 @@ Creates a new StarsStatisticalModel instance.
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:10](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L10)
+[components/StarsStatisticalModel.tsx:10](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L10)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:8](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L8)
+[components/StarsStatisticalModel.tsx:8](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L8)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:5](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L5)
+[components/StarsStatisticalModel.tsx:5](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L5)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:6](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L6)
+[components/StarsStatisticalModel.tsx:6](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L6)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:7](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L7)
+[components/StarsStatisticalModel.tsx:7](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L7)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:9](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L9)
+[components/StarsStatisticalModel.tsx:9](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L9)
 
 ## Methods
 
@@ -107,7 +107,7 @@ A JSON string representing the instance.
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:43](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L43)
+[components/StarsStatisticalModel.tsx:43](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L43)
 
 ___
 
@@ -131,4 +131,4 @@ A new StarsStatisticalModel instance.
 
 #### Defined in
 
-[components/StarsStatisticalModel.tsx:53](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsStatisticalModel.tsx#L53)
+[components/StarsStatisticalModel.tsx:53](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsStatisticalModel.tsx#L53)

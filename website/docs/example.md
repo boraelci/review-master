@@ -3,9 +3,11 @@ id: example
 title: Example
 ---
 
-Visit http://review-master.s3-website-us-east-1.amazonaws.com or click the image below for the interactive example app.
+Visit http://review-master.s3-website-us-east-1.amazonaws.com or click the images below for the interactive example app.
 
-[![Example](/img/example-app.png)](http://review-master.s3-website-us-east-1.amazonaws.com)
+[![Example1](/img/historical.png)](http://review-master.s3-website-us-east-1.amazonaws.com)
+
+[![Example2](/img/categorical.png)](http://review-master.s3-website-us-east-1.amazonaws.com)
 
 This application uses the following sample data stored as analysisResponse.json:
 

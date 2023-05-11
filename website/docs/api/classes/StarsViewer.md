@@ -24,7 +24,7 @@ Creates a new StarsViewer instance.
 
 #### Defined in
 
-[components/StarsViewer.tsx:17](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L17)
+[components/StarsViewer.tsx:17](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L17)
 
 ## Properties
 
@@ -34,7 +34,7 @@ Creates a new StarsViewer instance.
 
 #### Defined in
 
-[components/StarsViewer.tsx:9](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L9)
+[components/StarsViewer.tsx:9](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L9)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[components/StarsViewer.tsx:10](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L10)
+[components/StarsViewer.tsx:10](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L10)
 
 ## Methods
 
@@ -62,7 +62,7 @@ A JSX.Element representing a table with statistical data.
 
 #### Defined in
 
-[components/StarsViewer.tsx:128](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L128)
+[components/StarsViewer.tsx:128](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L128)
 
 ___
 
@@ -80,7 +80,7 @@ A StarsStatisticalModel instance.
 
 #### Defined in
 
-[components/StarsViewer.tsx:110](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L110)
+[components/StarsViewer.tsx:110](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L110)
 
 ___
 
@@ -98,7 +98,7 @@ The mean of the star ratings.
 
 #### Defined in
 
-[components/StarsViewer.tsx:27](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L27)
+[components/StarsViewer.tsx:27](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L27)
 
 ___
 
@@ -116,7 +116,7 @@ The median of the star ratings.
 
 #### Defined in
 
-[components/StarsViewer.tsx:40](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L40)
+[components/StarsViewer.tsx:40](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L40)
 
 ___
 
@@ -141,7 +141,7 @@ and interquartile range (IQR) of the star ratings.
 
 #### Defined in
 
-[components/StarsViewer.tsx:74](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L74)
+[components/StarsViewer.tsx:74](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L74)
 
 ___
 
@@ -159,4 +159,4 @@ The standard deviation of the star ratings.
 
 #### Defined in
 
-[components/StarsViewer.tsx:56](https://github.com/boraelci/review-master/blob/c571097/src/components/StarsViewer.tsx#L56)
+[components/StarsViewer.tsx:56](https://github.com/boraelci/review-master/blob/2367247/src/components/StarsViewer.tsx#L56)

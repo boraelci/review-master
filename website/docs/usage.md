@@ -79,40 +79,42 @@ const App = () => {
         </Col>
       </Row>
       <Row className="mt-4">
-        <Col className="mx-auto" md={12}>
+        <Col className="mx-auto" md={9}>
           <Card className="shadow p-3">
+            <Card.Title className="text-center">
+              <h5>Historical View</h5>
+            </Card.Title>
             <Card.Body>
-              <Card.Title className="text-center">
-                <h5>Historical View</h5>
-              </Card.Title>
               <Line options={historicalOptions} data={historicalData} />
             </Card.Body>
           </Card>
         </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col className="mx-auto" md={10}>
+        <Col className="mx-auto" md={3}>
           <Card className="shadow p-3">
-            <Card.Body>
-              <Card.Title className="text-center">
-                <h5>Categorical View</h5>
-              </Card.Title>
-              <Radar options={categoricalOptions} data={categoricalData} />
+            <Card.Title className="text-center">
+              <h5>Statistical Analysis of Star Ratings</h5>
+            </Card.Title>
+            <Card.Body
+              className="text-center"
+              style={{ maxWidth: '100%', margin: '0 auto' }}
+            >
+              {starsViewer.createTable()}
             </Card.Body>
           </Card>
         </Col>
       </Row>
       <Row className="mt-4">
-        <Col className="mx-auto" md={6}>
+        <Col className="mx-auto" md={8}>
           <Card className="shadow p-3">
             <Card.Title className="text-center">
-              <h5>Stars Statistical Analysis</h5>
+              <h5>Categorical View</h5>
             </Card.Title>
-            <Card.Body
-              className="text-center"
-              style={{ maxWidth: '50%', margin: '0 auto' }}
-            >
-              {starsViewer.createTable()}
+            <Card.Body>
+              <Radar
+                height={500}
+                options={categoricalOptions}
+                data={categoricalData}
+              />
             </Card.Body>
           </Card>
         </Col>

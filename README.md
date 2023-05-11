@@ -26,7 +26,9 @@ Key features include:
 
 Check out the example React application at http://review-master.s3-website-us-east-1.amazonaws.com/
 
-[![Example](images/example-app.png)](http://review-master.s3-website-us-east-1.amazonaws.com)
+[![Example1](images/historical.png)](http://review-master.s3-website-us-east-1.amazonaws.com)
+
+[![Example2](images/categorical.png)](http://review-master.s3-website-us-east-1.amazonaws.com)
 
 ## Documentation
 
