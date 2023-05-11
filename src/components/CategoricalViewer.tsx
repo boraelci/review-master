@@ -52,6 +52,7 @@ export class CategoricalViewer {
     const chartJSData = this.convertToChartJSData(categoryData);
 
     const options = {
+      maintainAspectRatio: false,
       responsive: true,
       plugins: {
         legend: { position: 'top' as const },

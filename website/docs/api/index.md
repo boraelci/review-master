@@ -35,7 +35,7 @@ Review interface defining the structure of a single review analysis.
 
 #### Defined in
 
-[components/AnalysisModel.tsx:6](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L6)
+[components/AnalysisModel.tsx:6](https://github.com/boraelci/review-master/blob/2367247/src/components/AnalysisModel.tsx#L6)
 
 ## Variables
 
@@ -45,7 +45,7 @@ Review interface defining the structure of a single review analysis.
 
 #### Defined in
 
-[components/ColorPalette.ts:8](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L8)
+[components/ColorPalette.ts:8](https://github.com/boraelci/review-master/blob/2367247/src/components/ColorPalette.ts#L8)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[components/ColorPalette.ts:7](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L7)
+[components/ColorPalette.ts:7](https://github.com/boraelci/review-master/blob/2367247/src/components/ColorPalette.ts#L7)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[components/ColorPalette.ts:6](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L6)
+[components/ColorPalette.ts:6](https://github.com/boraelci/review-master/blob/2367247/src/components/ColorPalette.ts#L6)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[components/ColorPalette.ts:4](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L4)
+[components/ColorPalette.ts:4](https://github.com/boraelci/review-master/blob/2367247/src/components/ColorPalette.ts#L4)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[components/ColorPalette.ts:3](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L3)
+[components/ColorPalette.ts:3](https://github.com/boraelci/review-master/blob/2367247/src/components/ColorPalette.ts#L3)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[components/ColorPalette.ts:1](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L1)
+[components/ColorPalette.ts:1](https://github.com/boraelci/review-master/blob/2367247/src/components/ColorPalette.ts#L1)
 
 ## Functions
 
@@ -119,4 +119,4 @@ The formatted date string.
 
 #### Defined in
 
-[components/DateUtils.ts:7](https://github.com/boraelci/review-master/blob/c571097/src/components/DateUtils.ts#L7)
+[components/DateUtils.ts:7](https://github.com/boraelci/review-master/blob/2367247/src/components/DateUtils.ts#L7)

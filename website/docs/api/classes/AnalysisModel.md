@@ -25,7 +25,7 @@ Initialize the AnalysisModel with JSON data.
 
 #### Defined in
 
-[components/AnalysisModel.tsx:27](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L27)
+[components/AnalysisModel.tsx:27](https://github.com/boraelci/review-master/blob/2367247/src/components/AnalysisModel.tsx#L27)
 
 ## Properties
 
@@ -35,7 +35,7 @@ Initialize the AnalysisModel with JSON data.
 
 #### Defined in
 
-[components/AnalysisModel.tsx:20](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L20)
+[components/AnalysisModel.tsx:20](https://github.com/boraelci/review-master/blob/2367247/src/components/AnalysisModel.tsx#L20)
 
 ## Accessors
 
@@ -53,7 +53,7 @@ An array of formatted review analyses.
 
 #### Defined in
 
-[components/AnalysisModel.tsx:122](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L122)
+[components/AnalysisModel.tsx:122](https://github.com/boraelci/review-master/blob/2367247/src/components/AnalysisModel.tsx#L122)
 
 ## Methods
 
@@ -77,7 +77,7 @@ The formatted date string.
 
 #### Defined in
 
-[components/AnalysisModel.tsx:96](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L96)
+[components/AnalysisModel.tsx:96](https://github.com/boraelci/review-master/blob/2367247/src/components/AnalysisModel.tsx#L96)
 
 ___
 
@@ -99,7 +99,7 @@ Load and parse JSON data, validate and format the review analyses.
 
 #### Defined in
 
-[components/AnalysisModel.tsx:36](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L36)
+[components/AnalysisModel.tsx:36](https://github.com/boraelci/review-master/blob/2367247/src/components/AnalysisModel.tsx#L36)
 
 ___
 
@@ -115,7 +115,7 @@ Sort the review analyses by date.
 
 #### Defined in
 
-[components/AnalysisModel.tsx:109](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L109)
+[components/AnalysisModel.tsx:109](https://github.com/boraelci/review-master/blob/2367247/src/components/AnalysisModel.tsx#L109)
 
 ___
 
@@ -137,4 +137,4 @@ Validate that a review analysis has all the required properties.
 
 #### Defined in
 
-[components/AnalysisModel.tsx:71](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L71)
+[components/AnalysisModel.tsx:71](https://github.com/boraelci/review-master/blob/2367247/src/components/AnalysisModel.tsx#L71)

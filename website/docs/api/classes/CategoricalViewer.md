@@ -25,7 +25,7 @@ Creates a new CategoricalViewer instance.
 
 #### Defined in
 
-[components/CategoricalViewer.tsx:42](https://github.com/boraelci/review-master/blob/c571097/src/components/CategoricalViewer.tsx#L42)
+[components/CategoricalViewer.tsx:42](https://github.com/boraelci/review-master/blob/2367247/src/components/CategoricalViewer.tsx#L42)
 
 ## Properties
 
@@ -35,7 +35,7 @@ Creates a new CategoricalViewer instance.
 
 #### Defined in
 
-[components/CategoricalViewer.tsx:36](https://github.com/boraelci/review-master/blob/c571097/src/components/CategoricalViewer.tsx#L36)
+[components/CategoricalViewer.tsx:36](https://github.com/boraelci/review-master/blob/2367247/src/components/CategoricalViewer.tsx#L36)
 
 ## Methods
 
@@ -53,7 +53,7 @@ Aggregates positive and negative category counts from the analysis model.
 
 #### Defined in
 
-[components/CategoricalViewer.tsx:78](https://github.com/boraelci/review-master/blob/c571097/src/components/CategoricalViewer.tsx#L78)
+[components/CategoricalViewer.tsx:79](https://github.com/boraelci/review-master/blob/2367247/src/components/CategoricalViewer.tsx#L79)
 
 ___
 
@@ -77,7 +77,7 @@ Converts the aggregated category data into the format required by Chart.js.
 
 #### Defined in
 
-[components/CategoricalViewer.tsx:111](https://github.com/boraelci/review-master/blob/c571097/src/components/CategoricalViewer.tsx#L111)
+[components/CategoricalViewer.tsx:112](https://github.com/boraelci/review-master/blob/2367247/src/components/CategoricalViewer.tsx#L112)
 
 ___
 
@@ -100,4 +100,4 @@ Returns the Chart.js options and formatted data.
 
 #### Defined in
 
-[components/CategoricalViewer.tsx:50](https://github.com/boraelci/review-master/blob/c571097/src/components/CategoricalViewer.tsx#L50)
+[components/CategoricalViewer.tsx:50](https://github.com/boraelci/review-master/blob/2367247/src/components/CategoricalViewer.tsx#L50)
