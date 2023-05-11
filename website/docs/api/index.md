@@ -1,69 +1,122 @@
 ---
-id: 'index'
-title: 'review-master'
-sidebar_label: 'Exports'
+id: "index"
+title: "review-master"
+sidebar_label: "Exports"
 sidebar_position: 0.5
 custom_edit_url: null
 ---
 
 ## Classes
 
-- [CategoricalDataProvider](classes/CategoricalDataProvider.md)
-- [ChartWrapper](classes/ChartWrapper.md)
-- [HistoricalDataProvider](classes/HistoricalDataProvider.md)
+- [AnalysisModel](classes/AnalysisModel.md)
+- [CategoricalViewer](classes/CategoricalViewer.md)
+- [HistoricalViewer](classes/HistoricalViewer.md)
+- [StarsStatisticalModel](classes/StarsStatisticalModel.md)
+- [StarsViewer](classes/StarsViewer.md)
 
-## Interfaces
+## Type Aliases
 
-- [DataProvider](interfaces/DataProvider.md)
+### Review
+
+Ƭ **Review**: `Object`
+
+Review interface defining the structure of a single review analysis.
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `date` | `string` |
+| `generalSentiment` | `string` |
+| `negativeCategories` | `string`[] |
+| `positiveCategories` | `string`[] |
+| `reviewId` | `string` |
+| `stars` | `string` |
+
+#### Defined in
+
+[components/AnalysisModel.tsx:6](https://github.com/boraelci/review-master/blob/c571097/src/components/AnalysisModel.tsx#L6)
+
+## Variables
+
+### negativeBackgroundColor
+
+• `Const` **negativeBackgroundColor**: `string`
+
+#### Defined in
+
+[components/ColorPalette.ts:8](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L8)
+
+___
+
+### negativeBorderColor
+
+• `Const` **negativeBorderColor**: `string`
+
+#### Defined in
+
+[components/ColorPalette.ts:7](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L7)
+
+___
+
+### negativeColor
+
+• `Const` **negativeColor**: ``"255, 99, 132"``
+
+#### Defined in
+
+[components/ColorPalette.ts:6](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L6)
+
+___
+
+### positiveBackgroundColor
+
+• `Const` **positiveBackgroundColor**: `string`
+
+#### Defined in
+
+[components/ColorPalette.ts:4](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L4)
+
+___
+
+### positiveBorderColor
+
+• `Const` **positiveBorderColor**: `string`
+
+#### Defined in
+
+[components/ColorPalette.ts:3](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L3)
+
+___
+
+### positiveColor
+
+• `Const` **positiveColor**: ``"53, 162, 235"``
+
+#### Defined in
+
+[components/ColorPalette.ts:1](https://github.com/boraelci/review-master/blob/c571097/src/components/ColorPalette.ts#L1)
 
 ## Functions
 
-### CategoricalView
+### formatDate
 
-▸ **CategoricalView**(`props`): `Element`
+▸ **formatDate**(`dateObj`): `string`
 
-This function renders a CategoricalView component with the given
-title, provider, and chartWrapper. It displays a radar chart with
-positive and negative category counts provided by the given CategoricalDataProvider.
+Format a Date object into a string in the format MM/DD/YYYY.
 
 #### Parameters
 
-| Name    | Type                   | Description                                       |
-| :------ | :--------------------- | :------------------------------------------------ |
-| `props` | `CategoricalViewProps` | The properties for the CategoricalView component. |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `dateObj` | `Date` | The Date object to be formatted. |
 
 #### Returns
 
-`Element`
+`string`
 
-A radar chart displaying the categorical data.
-
-#### Defined in
-
-[views/CategoricalView.tsx:21](https://github.com/boraelci/review-master/blob/bfa07c8/src/views/CategoricalView.tsx#L21)
-
----
-
-### HistoricalView
-
-▸ **HistoricalView**(`props`): `Element`
-
-This function renders a HistoricalView component with the given
-title, provider, and chartWrapper. It displays a line chart with
-positive and negative review counts over time provided by the given HistoricalDataProvider.
-
-#### Parameters
-
-| Name    | Type                  | Description                                      |
-| :------ | :-------------------- | :----------------------------------------------- |
-| `props` | `HistoricalViewProps` | The properties for the HistoricalView component. |
-
-#### Returns
-
-`Element`
-
-A line chart displaying the historical review data.
+The formatted date string.
 
 #### Defined in
 
-[views/HistoricalView.tsx:21](https://github.com/boraelci/review-master/blob/bfa07c8/src/views/HistoricalView.tsx#L21)
+[components/DateUtils.ts:7](https://github.com/boraelci/review-master/blob/c571097/src/components/DateUtils.ts#L7)

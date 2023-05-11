@@ -2,15 +2,28 @@ import React from 'react';
 import { AnalysisModel } from './AnalysisModel';
 import { StarsStatisticalModel } from './StarsStatisticalModel';
 
+/**
+ * A class for visualizing the review analysis data in a tabular format.
+ */
 export class StarsViewer {
   public analysisModel: AnalysisModel;
   public starsStatisticalModel: StarsStatisticalModel;
 
+  /**
+   * Creates a new StarsViewer instance.
+   *
+   * @param analysisModel - An instance of the AnalysisModel class containing review analysis data.
+   */
   constructor(analysisModel: AnalysisModel) {
     this.analysisModel = analysisModel;
     this.starsStatisticalModel = this.getData();
   }
 
+  /**
+   * Calculates the mean (average) of the star ratings.
+   *
+   * @returns The mean of the star ratings.
+   */
   public mean(): number {
     const totalStars = this.analysisModel.analysis.reduce(
       (sum, review) => sum + parseFloat(review.stars),
@@ -19,6 +32,11 @@ export class StarsViewer {
     return totalStars / this.analysisModel.analysis.length;
   }
 
+  /**
+   * Calculates the median (middle value) of the star ratings.
+   *
+   * @returns The median of the star ratings.
+   */
   public median(): number {
     const sortedStars = this.analysisModel.analysis
       .map((review) => parseFloat(review.stars))
@@ -30,6 +48,11 @@ export class StarsViewer {
       : sortedStars[mid];
   }
 
+  /**
+   * Calculates the standard deviation of the star ratings.
+   *
+   * @returns The standard deviation of the star ratings.
+   */
   public standardDeviation(): number {
     const meanValue = this.mean();
     const variance =
@@ -42,6 +65,12 @@ export class StarsViewer {
     return Math.sqrt(variance);
   }
 
+  /**
+   * Calculates the quartiles of the star ratings.
+   *
+   * @returns An object containing the lower quartile (Q1), upper quartile (Q3),
+   * and interquartile range (IQR) of the star ratings.
+   */
   public quartiles(): {
     lowerQuartile: number;
     upperQuartile: number;
@@ -73,6 +102,11 @@ export class StarsViewer {
     };
   }
 
+  /**
+   * Retrieves the StarsStatisticalModel instance with calculated statistical data.
+   *
+   * @returns A StarsStatisticalModel instance.
+   */
   public getData(): StarsStatisticalModel {
     const { lowerQuartile, upperQuartile, interquartileRange } =
       this.quartiles();
@@ -86,6 +120,11 @@ export class StarsViewer {
     );
   }
 
+  /**
+   * Creates a table element for displaying the statistical data of the star ratings.
+   *
+   * @returns A JSX.Element representing a table with statistical data.
+   */
   public createTable(): JSX.Element {
     const data = this.starsStatisticalModel;
 
